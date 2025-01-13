@@ -25,8 +25,11 @@
 2. 如果不存在，则创建一个新的 BrowserWindow 实例，并调用 onCreate 方法进行初始化，最后返回该实例。
 3. 如果已存在，则直接返回现有的 browserWindow。
 
+<<<<<<< HEAD
 <img src="./image/x-lct.png" alt="流程图" width="200"/>
 
+=======
+>>>>>>> 547c71fdbd18630b348929bd64019ab33b81c6cd
 ### 配置应用主窗口
 
 ```bash
