@@ -25,7 +25,8 @@
 2. 如果不存在，则创建一个新的 BrowserWindow 实例，并调用 onCreate 方法进行初始化，最后返回该实例。
 3. 如果已存在，则直接返回现有的 browserWindow。
 
-<img src="RuoYi-Geek-Electron\image\x-lct.png" alt="流程图" width="200"/>
+<img src="./image/x-lct.png" alt="流程图" width="200"/>
+
 ### 配置应用主窗口
 
 ```bash
@@ -156,7 +157,7 @@ if (process.contextIsolated) {
 •	在Electron应用中，API通过预加载脚本安全地暴露给渲染进程，以便前端代码可以调用这些API与主进程或其他部分进行交互。
 •	api对象可以包含自定义的方法和属性，根据需求进行扩展。
 
-#渲染进程
+# 渲染进程
 
 ```ts
 <html>
@@ -178,4 +179,4 @@ if (process.contextIsolated) {
 </html>
 ```
 
-配置了内容安全策略，引入了必要的JavaScript模块和CSS样式文件。页面主体中有一个`<div id="app"></div>`元素，用于作为前端框架的挂载点或放置主要内容。
+配置了内容安全策略，引入了必要的JavaScript模块和CSS样式文件。页面主体中有一个 `<div id="app"></div>`元素，用于作为前端框架的挂载点或放置主要内容。
