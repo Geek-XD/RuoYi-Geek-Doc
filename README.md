@@ -37,3 +37,40 @@ RuoYi-Geek不仅仅是一个简单的升级版本，更是对于RuoYi生态的�
 ### RuoYi-Geek-Electron
 
 RuoYi-Geek-Electron旨在为RuoYi-Geek-SpringBoot3与RuoYi-Geek-Vue3搭建一个舒适的窗口应用环境，并用装饰器简化开发。目前正在完善中。。。。。。。
+
+
+# 联系我们：
+
+### 技术交流群 QQ：744785891
+
+欢迎所有对 RuoYi-Geek 感兴趣的开发者加入我们的社区😆！
+
+<img src="https://foruda.gitee.com/images/1736235208931843340/f1b736ab_9844561.png" alt="QQ二维码" width="200"/>
+
+### 商业合作😆
+
+我们欢迎各类商业合作机会，无论是技术咨询、项目合作还是其他形式的合作，都期待与您携手共创未来。
+如果您有兴趣，请通过以下方式联系我们：
+
+<table>
+  <tr>
+    <td>
+      <strong>QQ</strong><br/>
+      QQ号：2086232477  
+    </td>
+    <td>
+      <strong>微信</strong><br/>
+      微信号：tantianming000  
+    </td>
+  </tr>
+    <tr>
+        <td>
+            <img src="https://foruda.gitee.com/images/1736318136310918813/b2ebdfc0_9844561.png "qq.png"" alt="QQ二维码" width="200"/>
+        </td>
+        <td>
+              <img src="https://foruda.gitee.com/images/1736318189364714229/a6020034_9844561.png "wx.png"" alt="微信二维码" width="200"/>
+        </td>
+    </tr>
+</table>
+
+我们期待着与您建立长期稳定的合作关系，并共同探索更多的可能性。
