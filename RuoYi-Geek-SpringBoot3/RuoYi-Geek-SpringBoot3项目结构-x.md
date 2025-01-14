@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # RuoYi-Geek-SpringBoot3项目结构
 
