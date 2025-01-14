@@ -14,10 +14,10 @@ rouyi-geek-springboot3 —— rouyi-admin —— src ——resources —— appl
 
 ```
 # 主库数据源
-                MASTER:
-                    url: jdbc:mysql://127.0.0.1/ry?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
-                    username: root
-                    password: 123456
+ MASTER:
+  url: jdbc:mysql://127.0.0.1/ry?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+  username: root
+  password: 123456
 ```
 
 运行数据库文件，此过程会用到sql文件的存储地址，即rouyi-geek-springboot3 ——  sql的路径
