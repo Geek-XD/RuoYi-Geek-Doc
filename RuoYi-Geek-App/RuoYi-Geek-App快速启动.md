@@ -209,14 +209,6 @@ app.use(uviewPlus);
     </tr>
 </table>
 
-# 附录
-
-[Vue3 官网](https://cn.vuejs.org/)；
-[uniapp 官网](https://uniapp.dcloud.net.cn/)；
-[uView-plus 官网](https://uiadmin.net/uview-plus/)；
-[uCharts 官网](https://www.ucharts.cn/v2/#/)；
-[RuoYi 官网](http://ruoyi.vip/)；
-
 # 联系我们：
 
 ### 技术交流群 QQ：744785891
