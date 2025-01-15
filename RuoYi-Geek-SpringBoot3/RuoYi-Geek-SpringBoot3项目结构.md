@@ -1,7 +1,7 @@
 本项目是基于 Spring Boot 的后台管理系统，对若依（RuoYi）框架进行完善升级，它具有模块化设计，灵活的系统配置和权限管理等功能。以下是一个典型的框架目录结构示例：
 
 ```
-ruoyi-geek-project/
+（ruoyi-geek-project/
 ├── ruoyi-admin                    # 后台管理模块
 │   ├── src
 │   │   ├── main
@@ -30,11 +30,11 @@ ruoyi-geek-project/
 │   │      │──security               #应用安全验证
 │   │      └── web                   # 交互配置
 │   └── pom.xml                     # Maven依赖管理
-├── ruoyi-middleware                 # 中间件配置模块 
+├── ruoyi-middleware                 # 中间件配置模块（可移除） 
 │   
 ├── ruoyi-models                    # 数据模型配置
 │
-├── ruoyi-pay                       # 支付接口配置
+├── ruoyi-pay                       # 支付接口配置（开发中）
 │
 ├── ruoyi-plugins                   # 扩展功能
 │

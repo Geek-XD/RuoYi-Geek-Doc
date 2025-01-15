@@ -14,7 +14,7 @@
 git clone https://gitee.com/geek-xd/ruoyi-geek-vue3.git
 
 # 进入项目目录
-cd RuoYi-Vue3
+cd ruoyi-geek-vue3
 
 # 安装依赖
 yarn --registry=https://registry.npmmirror.com
