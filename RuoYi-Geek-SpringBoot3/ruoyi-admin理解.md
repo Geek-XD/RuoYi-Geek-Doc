@@ -1,3 +1,32 @@
+# 交互
+
+## 验证码
+
+系统发出GET请求，请求方法为captchaImage，向前端发出请求，通过反向代理，url请求前端，进行代理，映射到后端，解决跨域问题
+
+<img src= "./images/captcha-request.png" alt="系统请求">
+
+```
+请求url：http://localhost/dev-api/captchaImage
+```
+
+后端：创建ajax对象，判断是否开启验证码验证，若开启，生成键值，判断生成数字还是字符串类验证码，数字类验证码生成表达式，以@作为分割，做不同处理
+
+```
+// 映射HTTP GET请求到 /captchaImage 路径上，由 getCode 方法处理。
+    @GetMapping("/captchaImage")
+    public AjaxResult getCode(HttpServletResponse response) throws IOException {
+    ······
+    }
+```
+
+
+
+<img src= "./images/captcha-imag.png" alt="系统请求">
+
+## 登录
+
+
 # java/com/ruoyi
 
 ## web
@@ -78,12 +107,33 @@
 
 #### system
 
+SysConfigController.java
+
+它主要用于管理系统配置参数，允许用户通过HTTP请求执行查询、添加、修改、删除以及导出等操作。
+
+SysDeptController.java
+
+该控制器主要用于管理系统的部门信息，包括获取、查询、新增、修改和删除部门等操作。
+
+SysDictDataController.java
+
+该控制器主要用于管理系统中的数据字典信息，包括查询、导出、新增、修改和删除字典数据等操作。
+
+SysDictTypeController.java
+
+该控制器主要用于管理系统中的数据字典类型信息，包括查询、导出、新增、修改、删除以及刷新缓存等操作
+
+SysIndexController.java
+
+该控制器主要用于处理访问系统首页的请求，并返回一个提示信息给用户。
+
+SysLoginController.java
+
+该控制器主要用于处理用户登录验证、获取用户信息以及获取路由信息等操作。
 
 #### tool
 
-
 ### core
-
 
 ## RuoYiApplication.java：启动程序
 
