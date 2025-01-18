@@ -4,13 +4,33 @@
 
 系统发出GET请求，请求方法为captchaImage，向前端发出请求，通过反向代理，url请求前端，进行代理，映射到后端，解决跨域问题
 
-<img src= "./images/captcha-request.png" alt="系统请求">
+<img src= "./images/captcha-request.png" alt="验证码请求">
 
 ```
 请求url：http://localhost/dev-api/captchaImage
 ```
 
+login.vue
+
+```
+<div class="login-code">
+          <img :src="codeUrl" @click="getCode" class="login-code-img" />
+        </div>
+
+function getCode() {
+  getCodeImg().then(res => {
+    captchaEnabled.value = res.captchaEnabled === undefined ? true : res.captchaEnabled;
+    if (captchaEnabled.value) {
+      codeUrl.value = "data:image/gif;base64," + res.img;
+      loginForm.value.uuid = res.uuid;
+    }
+  });
+}
+```
+
 后端：创建ajax对象，判断是否开启验证码验证，若开启，生成键值，判断生成数字还是字符串类验证码，数字类验证码生成表达式，以@作为分割，做不同处理
+
+CacheController.java
 
 ```
 // 映射HTTP GET请求到 /captchaImage 路径上，由 getCode 方法处理。
@@ -20,12 +40,61 @@
     }
 ```
 
-
-
 <img src= "./images/captcha-imag.png" alt="系统请求">
 
 ## 登录
 
+点击登录按钮，是为了把表单提交到后台，系统发出POST请求，请求login方法。具体过程，点击登录后，先执行handleLogin方法，在方法体中执行login方法，封装用户名、密码等信息，返回给POST请求。通过反向代理映射到后端。
+
+<img src= "./images/login-request.png" alt="登录请求">
+
+```
+请求url：
+http://localhost/dev-api/login
+```
+
+login.vue
+
+```
+<el-button :loading="loading" size="large" type="primary" style="width:100%;" @click.prevent="handleLogin">
+          <span v-if="!loading">登 录</span>
+          <span v-else>登 录 中...</span>
+        </el-button>
+
+function handleLogin() {
+    ······
+}
+```
+
+后端：前端输入的信息封装成对象传过来，后端要完成的事情如下：登录前置校验、验证码校验、IP校验、用户验证、生成Token
+
+用户验证写入操作日志和用户登录日志
+
+SysLoginService.java
+
+```
+// 记录操作日志       AsyncManager.me().execute(AsyncFactory.recordLogininfor(username, Constants.LOGIN_SUCCESS, MessageUtils.message("user.login.success")));
+        LoginUser loginUser = (LoginUser) authentication.getPrincipal();
+        //修改用户登录信息
+        recordLoginInfo(loginUser.getUserId());
+        // 生成token
+        return tokenService.createToken(loginUser);
+
+```
+
+SysLoginController.java
+
+```
+@PostMapping("/login")
+    public AjaxResult login(@RequestBody LoginBody loginBody) {
+        AjaxResult ajax = AjaxResult.success();
+        // 生成Token
+        String token = loginService.login(loginBody.getUsername(), loginBody.getPassword(), loginBody.getCode(),
+                loginBody.getUuid());//前边那些步骤通过login方法完成
+        ajax.put(Constants.TOKEN, token);
+        return ajax;
+    }
+```
 
 # java/com/ruoyi
 
