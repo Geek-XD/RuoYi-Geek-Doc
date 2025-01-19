@@ -1,5 +1,43 @@
 # RuoYi-Geek-SpringBoot3核心逻辑理解
 
+```
+core
+├── controller
+│   └── BaseController.java  # 控制器基类，处理HTTP请求
+├── domain
+│   ├── entity
+│   │   ├── FileEntity.java  # 文件实体类
+│   │   ├── SysDept.java     # 系统部门实体类
+│   │   ├── SysDictData.java # 系统字典数据实体类
+│   │   ├── SysDictType.java # 系统字典类型实体类
+│   │   ├── SysMenu.java     # 系统菜单实体类
+│   │   ├── SysRole.java     # 系统角色实体类
+│   │   └── SysUser.java     # 系统用户实体类
+│   └── model
+│   │   ├── LoginBody.java   # 登录请求体模型类
+│   │   ├── LoginUser.java   # 登录用户模型类
+│   │   ├── RegisterBody.java# 注册请求体模型类
+│   ├── AjaxResult.java  # 异步请求结果模型类
+│   ├── BaseEntity.java  # 基础实体类
+│   ├── Message.java     # 消息模型类
+│   ├── R.java           # 响应模型类
+│   ├── TreeEntity.java  # 树形实体类
+│   └── TreeSelect.java  # 树形选择模型类
+├── page
+│   ├── PageDomain.java      # 分页领域模型类
+│   ├── TableDataInfo.java   # 表格数据信息模型类
+│   └── TableSupport.java    # 表格支持类
+├── security\service
+│   └── IPermissionService.java # 权限服务接口
+└── text
+    ├── CharsetKit.java      # 字符集工具类
+    ├── Convert.java         # 转换工具类
+    └── StrFormatter.java    # 字符串格式化工具类
+```
+
+
+
+
 <img align="right" src="./images/流程图1.png" alt="basectr流程图" width="500"/>
 
 ## 分页处理
